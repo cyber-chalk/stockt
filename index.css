@@ -1,0 +1,45 @@
+#primary-chart {
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+
+
+#image-container {
+    position: relative;
+    display: flex;
+    justify-content: center
+}
+
+#info-box {
+    background: #070707;
+    box-shadow: 0px 15px 63px 38px rgba(0, 0, 0, 0.28);
+    border-radius: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10em;
+    height: 5em;
+    flex-direction: column;
+    justify-content: space-around;
+    line-height: 0px;
+}
+
+#date {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+
+    color: #FFFFFF;
+}
+
+#money {
+    font-family: 'inter';
+    font-style: normal;
+    font-weight: 300;
+    color: #909090;
+}
