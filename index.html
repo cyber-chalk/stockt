@@ -5,7 +5,13 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
+		<script
+			src="https://kit.fontawesome.com/582fc02323.js"
+			crossorigin="anonymous"
+		></script>
+		<script src="./cookies.js" defer></script>
 		<link rel="stylesheet" href="./index.css" />
+		<link rel="stylesheet" href="./chart.css" defer />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Inter&family=Open+Sans&display=swap"
 			rel="stylesheet"
@@ -13,14 +19,73 @@
 		<script src="./index.js" defer></script>
 	</head>
 	<body>
-		<div id="image-container">
-			<img src="bullish.svg" alt="" id="primary-chart" />
-			<div id="info-box">
-				<h3 id="date">Date</h3>
-				<h4 id="money">Money</h4>
-			</div>
+		<div class="cookie-container">
+			<h1>Accept cookies?</h1>
+			<input type="text" placeholder="name" id="popup-input" autofocus />
+			<p id="close">close</p>
 		</div>
-		<h1 id="coords">X position: Y position:</h1>
-		<h1 id="computed">Time: Money:</h1>
+		
+		<div class="profile-container">
+			<h1>No profile</h1>
+			<p id="close-profile">close</p>
+		</div>
+
+
+		<nav>
+			<img src="./images/Logo.svg" id="logo" alt="stockt" />
+			<a
+				href="https://instagram.com"
+				target="_blank"
+				rel="noopener noreferrer"
+				><i class="fa-brands fa-instagram right-icons"></i
+			></a>
+			<a
+				href="https://twitter.com"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				<i class="fa-brands fa-twitter right-icons"></i
+			></a>
+
+			<i class="fa-solid fa-user right-icons"></i>
+		</nav>
+
+		<main>
+			<header>
+				<div id="title-container">
+					<h1>
+						<span style="color: #32AC69;">Green</span>
+						pill or
+						<span style="color: #E73543;"> Red</span>
+						pill?
+					</h1>
+					<h2>Get started now and get a free $billion!</h2>
+				</div>
+
+				<div id="image-container">
+					<img src="./images/bullish.svg" alt="" id="primary-chart" />
+					<div id="info-box">
+						<h3 id="date">Date</h3>
+						<h4 id="money">Money</h4>
+					</div>
+				</div>
+			</header>
+			<section id="companies">
+				<h2>invest in...</h2>
+				<div id="list">
+					<i class="fa-brands fa-rebel"></i>
+					<i class="fa-brands fa-ups"></i>
+					<i class="fa-brands fa-meta"></i>
+					<i class="fa-brands fa-galactic-republic"></i>
+					<i class="fa-solid fa-cannabis"></i>
+					<i class="fa-solid fa-drumstick-bite"></i>
+				</div>
+			</section>
+			<section id="news-container">
+				<img src="./images/Basketball.svg" class="news" alt="bball" />
+				<img src="./images/Elon.svg" class="news" alt="news" />
+				<img src="./images/Mark.svg" class="news" alt="mark" />
+			</section>
+		</main>
 	</body>
 </html>
