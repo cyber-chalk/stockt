@@ -8,17 +8,25 @@ if (document.cookie == String) settings.style.display = "none";
 let input = document.getElementById("popup-input");
 let close = document.getElementById("close");
 close.addEventListener("click", function () {
-	if (input.value == "") settings.style.display = "none";
-	document.cookie = "name=" + input.value;
-	console.log(document.cookie, input.value, "hi :)");
+	// if (input.value == "") settings.style.display = "none";
+	document.cookie = "name=" + input.value + ";max-age=86400;";
+	console.log(document.cookie, input.value);
 	settings.style.display = "none";
 });
 
-function deleteCookie(name) {
-	document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:01 GMT;";
-}
+// function deleteCookie(name) {.
+// 	document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:01 GMT;";
+// }
 
-// let openProfile = document.getElementsByClassName("right-icons")[2];
-// openProfile.addEventListener("onclick", function () {
-// 	settings.style.display = "flex";
-// });
+//Profile
+
+let profile = document.getElementsByClassName("profile-container")[0];
+let btn = document.getElementsByClassName("right-icons")[2];
+btn.addEventListener("click", function () {
+	profile.style.display = "flex";
+});
+
+let closeProfile = document.getElementById("close-profile");
+closeProfile.addEventListener("click", function () {
+	profile.style.display = "none";
+});
