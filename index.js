@@ -5,8 +5,6 @@ let dateValue = document.getElementById("date");
 let infoBox = document.getElementById("info-box");
 
 let rect = container.getBoundingClientRect();
-let time;
-let money;
 
 container.addEventListener("mouseleave", function () {
 	infoBox.style.display = "none";
@@ -15,6 +13,9 @@ container.addEventListener("mouseleave", function () {
 container.addEventListener("mousemove", function (event) {
 	let x = Math.round(((event.clientX - rect.left) / rect.width) * 100);
 	let y = Math.round(((event.clientY - rect.top) / rect.height) * 100);
+
+	let time;
+	let money;
 
 	infoBox.style.display = "flex";
 
