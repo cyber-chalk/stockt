@@ -1,0 +1,12 @@
+footer {
+	font-family: inter;
+	font-weight: lighter;
+	display: flex;
+	color: white;
+	justify-content: space-around;
+	align-items: center;
+}
+
+footer div {
+	display: block;
+}
