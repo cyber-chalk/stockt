@@ -1,10 +1,9 @@
 let settings = document.getElementsByClassName("cookie-container")[0];
 
-const value = ("; " + document.cookie).split(`; name=`).pop().split(";")[0];
-
+let value = ("; " + document.cookie).split(`; name=`).pop().split(";")[0];
+console.log(value, "value");
 //check if the user has already visited
-if (value == typeof String) {
-	console.log("ho");
+if (value.length != 0) {
 	settings.style.display = "none";
 }
 
@@ -13,6 +12,7 @@ let close = document.getElementById("close");
 close.addEventListener("click", function () {
 	if (input.value == "") return (settings.style.display = "none");
 	document.cookie = "name=" + input.value + ";max-age=86400;";
+	value = input.value;
 
 	console.log(document.cookie, input.value);
 	settings.style.display = "none";
@@ -22,18 +22,22 @@ close.addEventListener("click", function () {
 // 	document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:01 GMT;";
 // }
 
-//Profile
+// Profile
 
-// let profile = document.getElementsByClassName("profile-container")[0];
-// let btn = document.getElementsByClassName("right-icons")[2];
-// btn.addEventListener("click", function () {
-// 	profile.style.display = "flex";
-// });
+let profile = document.getElementsByClassName("profile-container")[0];
+let openbtn = document.getElementById("profile");
+openbtn.addEventListener("click", function () {
+	profile.style.display = "block";
+	update();
+});
 
-// let closeProfile = document.getElementById("close-profile");
-// closeProfile.addEventListener("click", function () {
-// 	profile.style.display = "none";
-// });
+let closeProfile = document.getElementById("close-profile");
+closeProfile.addEventListener("click", function () {
+	profile.style.display = "none";
+});
 
-// let status = document.querySelector(".profile-contianer h1");
-// if (value == String) status.innerHTMl = value;
+let cookieStatus = document.querySelector(".profile-container h1");
+
+let update = () => {
+	if (value.length != 0) cookieStatus.innerText = value;
+};
