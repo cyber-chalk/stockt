@@ -1,12 +1,26 @@
 footer {
+	/* margin: 10% -1.5vw auto -1.5vw; */
+	margin-top: 10%;
+	margin-bottom: auto;
+	background-color: #23272f;
 	font-family: inter;
-	font-weight: lighter;
 	display: flex;
 	color: white;
 	justify-content: space-around;
 	align-items: center;
+	background-color: #23272f;
+	border-radius: 2vw;
 }
 
 footer div {
 	display: block;
+}
+
+footer div h3:first-child {
+	color: #67707f;
+}
+
+footer h3 {
+	font-weight: 100 !important;
+	text-align: center;
 }

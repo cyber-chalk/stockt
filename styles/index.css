@@ -1,9 +1,11 @@
 body {
 	background-color: #181818;
+	/* margin: 1.5vw 1.5vw 0px 1.5vw; */
 	margin: 1.5vw;
 	/* background: #181818
     1D222D; */
 }
+
 
 .cookie-container {
 	text-align: center;
@@ -121,7 +123,9 @@ header {
 #companies {
 	color: rgb(197 197 197) !important;
 	background-color: #23272f;
-	margin: 10% -1.5vw 2vw -1.5vw;
+	/* margin: 10% -1.5vw 2vw -1.5vw; */
+	margin: 10% 0 2vw 0;
+	border-radius: 2vw;
 	padding: 3% 0;
 }
 
