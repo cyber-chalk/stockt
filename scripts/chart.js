@@ -4,13 +4,15 @@ let moneyValue = document.getElementById("money");
 let dateValue = document.getElementById("date");
 let infoBox = document.getElementById("info-box");
 
-let rect = container.getBoundingClientRect();
+
 
 container.addEventListener("mouseleave", function () {
 	infoBox.style.display = "none";
 });
 
 container.addEventListener("mousemove", function (event) {
+	let rect = container.getBoundingClientRect();
+	
 	let x = Math.round(((event.clientX - rect.left) / rect.width) * 100);
 	let y = Math.round(((event.clientY - rect.top) / rect.height) * 100);
 
